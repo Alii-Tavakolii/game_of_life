@@ -37,10 +37,13 @@ for i in range(0, 100):
   universe[rnd.randint(0, height - 1)][rnd.randint(0, height - 1)] = 1
 
 
-for i in range(1000):
+for i in range(1000): #You can change 1000 to every natural number
   # plt.figure()
-  plt.imshow(universe)
-  plt.show()
-  clear_output(wait=True)
-  universe = next_day(universe)
+  try:
+    plt.imshow(universe)
+    plt.show()
+    clear_output(wait=True)
+    universe = next_day(universe)
+  except:
+    break
 # print("finished")
